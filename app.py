@@ -39,5 +39,6 @@ if st.button("実行"):
     ]
 
     llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, verbose=True)
+    print(llm)
     result = llm(messages)
     st.write(f"回答: **{result.content}**")
