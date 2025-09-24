@@ -29,7 +29,7 @@ if st.button("実行"):
         exit
     
     if selected_item == "料理の専門家":
-        content="あなはたは料理の専門家です。"
+        content="あなはたは料理の専門家です。"  
     else:
         content="あなはたは野球の専門家です。"
 
@@ -38,8 +38,6 @@ if st.button("実行"):
         HumanMessage(content=input_message),
     ]
 
-    llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
-
+    llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, verbose=True)
     result = llm(messages)
-
     st.write(f"回答: **{result.content}**")
