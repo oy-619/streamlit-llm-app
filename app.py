@@ -7,9 +7,9 @@ load_dotenv()
 
 st.title("LLM機能を搭載したWebアプリ")
 
-st.write("##### 動作モード1: 料理の専門家")
+st.write("##### 動作モード: 料理の専門家")
 st.write("入力フォームにテキストを入力し、「実行」ボタンを押すことで選択した料理の専門家の回答が得られます。")
-st.write("##### 動作モード1: 野球の専門家")
+st.write("##### 動作モード: 野球の専門家")
 st.write("入力フォームにテキストを入力し、「実行」ボタンを押すことで選択した野球の専門家の回答が得られます。")
 
 selected_item = st.radio(
@@ -24,7 +24,7 @@ input_message = st.text_input(label="質問を入力してください。")
 if st.button("実行"):
     st.divider()
 
-    if input_message:
+    if not input_message:
         st.error("テキストを入力してから「実行」ボタンを押してください。")
         exit
     
