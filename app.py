@@ -26,7 +26,7 @@ if st.button("実行"):
 
     if not input_message:
         st.error("テキストを入力してから「実行」ボタンを押してください。")
-        exit
+        st.stop()
     
     if selected_item == "料理の専門家":
         content="あなはたは料理の専門家です。"  
